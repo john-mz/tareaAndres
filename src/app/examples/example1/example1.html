@@ -1,0 +1,13 @@
+<h2>EJERCICIO 1</h2>
+@if (arreglo.length > 0) {
+    <ul>
+        @for (item of arreglo; track $index) {
+            <li>{{ item }}</li>
+        }
+    </ul>
+}@else{
+    <p>nada por mostrar</p>
+}
+<button (click)="capturarDatos()">PRESIONA</button>
+
+

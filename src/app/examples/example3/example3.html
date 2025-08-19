@@ -1,0 +1,26 @@
+<h2>EJERCICIO 3</h2>
+<form (ngSubmit)="onSubmit()">
+  <h2>Productos Caros</h2>
+  <p>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" [(ngModel)]="enteredNombre">
+  </p>
+
+  <p>
+    <label for="precio">Precio</label>
+    <input type="number" name="precio" [(ngModel)]="enteredPrecio">
+  </p>
+
+  <button type="submit">Create</button>
+</form>
+
+<h2>Answer</h2>
+@if (arreglo) {
+  <ul>
+  @for (item of arreglo; track $index) {
+    @if (item.precio > 100){
+      <li>{{item.nombre}} : {{item.precio}}</li>
+    }
+  }
+  </ul>
+}

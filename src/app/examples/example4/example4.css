@@ -1,0 +1,16 @@
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+p {
+    display: flex;
+      align-items: center; 
+      margin-bottom: 10px;
+}
+
+label {
+    width: 120px;
+      text-align: right;
+      margin-right: 10px;
+}

@@ -1,0 +1,27 @@
+<h2>EJERCICIO 8</h2>
+<form (ngSubmit)="onSubmit()">
+  <p>
+    <label for="nombre">Nombre</label>
+    <select name="categoria" [(ngModel)]="enteredCategoria">
+        <option value="a">a</option>
+        <option value="b">b</option>
+        <option value="c">c</option>
+    </select>
+  </p>
+
+  <p>
+    <label for="precio">Elemento</label>
+    <input type="text" name="precio" [(ngModel)]="enteredElemento">
+  </p>
+
+    <button type="submit">Create</button>
+</form>
+
+<h2>Answer</h2>
+@for (item of objeto; track $index) {
+    <p><strong>categoria: {{item.categoria}}</strong></p>
+    @for (uno of item.elemento; track $index) {
+        <p>{{uno}}</p>
+    }
+}
+<hr>

@@ -1,0 +1,11 @@
+.parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: red;
+}
+
+.child{
+    display: flex;
+}

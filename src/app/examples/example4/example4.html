@@ -1,0 +1,29 @@
+<h2>EJERCICIO 4</h2>
+<form (ngSubmit)="onSubmit()">
+  <p>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" [(ngModel)]="enteredTarea">
+  </p>
+
+  <p>
+    <label for="estado">estado</label>
+    <select name="estado" id="estado" [(ngModel)]="enteredEstado">
+        <option value="1">Completada</option>
+        <option value="0">No completada</option>
+    </select>
+  </p>
+
+    <button type="submit">Create</button>
+
+</form>
+
+<h2>Answer</h2>
+@if (arreglo) {
+  <ul>
+  @for (item of arreglo; track $index) {
+    @if (item.estado == true){
+      <li>{{item.nombre}}</li>
+    }
+  }
+  </ul>
+}

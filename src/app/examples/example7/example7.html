@@ -1,0 +1,15 @@
+<h2>EJERCICIO 7</h2>
+<button (click)="capturarDatos()">PRESIONA</button>
+
+<h2>Answer</h2>
+@if (arreglo.length > 0) {
+    <ul>
+        @for (item of arreglo; track $index) {
+            <li>{{ item }} - index: {{$index}}</li>
+        }
+    </ul>
+}@else{
+    <p>nada por mostrar</p>
+}
+
+

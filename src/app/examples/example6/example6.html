@@ -1,0 +1,29 @@
+<h2>EJERCICIO 6 - Edad</h2>
+<form (ngSubmit)="onSubmit()">
+  <p>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" [(ngModel)]="enteredNombre">
+  </p>
+
+  <p>
+    <label for="precio">Edad</label>
+    <input type="number" name="precio" [(ngModel)]="enteredPrecio">
+  </p>
+
+    <button type="submit">Create</button>
+</form>
+
+<h2>Answer</h2>
+@if (arreglo) {
+  <ul>
+  @for (item of arreglo; track $index) {
+    @if (item.precio < 18 && item.precio > 0){
+      <li>{{item.nombre}} tiene {{item.precio}} anios: Joven</li>
+    } @else if (item.precio > 18 && item.precio < 30) {
+      <li>{{item.nombre}} tiene {{item.precio}} : Adulto</li>
+    } @else {
+        <li>{{item.nombre}} tiene {{item.precio}} : Adulto tercera edad</li>
+    }
+  }
+  </ul>
+}
