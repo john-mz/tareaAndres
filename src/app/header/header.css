@@ -9,3 +9,7 @@
 .child{
     display: flex;
 }
+
+img{
+    width: 10%;
+}

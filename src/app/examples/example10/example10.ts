@@ -12,8 +12,11 @@ export class Example10 {
   dato: string = "";
 
   onSubmit(){
-    this.arreglo.push(this.dato);
-    this.clean();
+    if (this.dato != ""){
+      this.arreglo.push(this.dato);
+      this.clean();
+    }
+    
   }
 
   clean(){

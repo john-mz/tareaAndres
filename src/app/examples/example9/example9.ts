@@ -15,6 +15,7 @@ export class Example9 {
 
   onSubmit(){
     this.arreglo.push({nombre: this.enteredTarea, estado: this.enteredEstado});
+    this.clean();
   }
 
   clean(){
